@@ -1,0 +1,28 @@
+[
+    {
+        "\ufeffRecord": "528",
+        "DenID": "1146",
+        "Spring_year": "2017",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "FLIR",
+        "Latitude": "70.3153",
+        "Longitude": "-147.9995",
+        "Confirmation": "P",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "529",
+        "DenID": "1147",
+        "Spring_year": "2017",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "REPORT",
+        "Latitude": "70.3015",
+        "Longitude": "-147.8866",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    }
+]

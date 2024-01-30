@@ -1,0 +1,15 @@
+[
+    {
+        "\ufeffRecord": "530",
+        "DenID": "1148",
+        "Spring_year": "2018",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "REPORT",
+        "Latitude": "70.3288",
+        "Longitude": "-148.235",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    }
+]

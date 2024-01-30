@@ -1,0 +1,93 @@
+[
+    {
+        "\ufeffRecord": "403",
+        "DenID": "1012",
+        "Spring_year": "2013",
+        "Data_source": "USGS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "78.7596",
+        "Longitude": "-113.5841",
+        "Confirmation": "P",
+        "Substrate": "P",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "462",
+        "DenID": "1079",
+        "Spring_year": "2013",
+        "Data_source": "USGS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "79.1802",
+        "Longitude": "-137.1331",
+        "Confirmation": "P",
+        "Substrate": "P",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "489",
+        "DenID": "1107",
+        "Spring_year": "2013",
+        "Data_source": "USFWS",
+        "Discovery_method": "CONVENTIONAL",
+        "Latitude": "67.5872",
+        "Longitude": "-167.228",
+        "Confirmation": "C",
+        "Substrate": "P",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "490",
+        "DenID": "1108",
+        "Spring_year": "2013",
+        "Data_source": "USFWS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "75.7475",
+        "Longitude": "-147.0513",
+        "Confirmation": "P",
+        "Substrate": "P",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "491",
+        "DenID": "1109",
+        "Spring_year": "2013",
+        "Data_source": "USFWS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "68.1779",
+        "Longitude": "-177.5086",
+        "Confirmation": "P",
+        "Substrate": "L",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "492",
+        "DenID": "1110",
+        "Spring_year": "2013",
+        "Data_source": "USFWS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "69.7773",
+        "Longitude": "175.1546",
+        "Confirmation": "P",
+        "Substrate": "L",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "518",
+        "DenID": "1136",
+        "Spring_year": "2013",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "CONVENTIONAL",
+        "Latitude": "70.4885",
+        "Longitude": "-149.2432",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    }
+]

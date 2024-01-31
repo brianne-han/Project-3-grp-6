@@ -1,0 +1,7 @@
+﻿Record,DenID,Spring_year,Data_source,Discovery_method,Latitude,Longitude,Confirmation,Substrate,Position_method,Horizontal_error_m
+404,1013,2014,USGS,SATELLITE,70.0919,-145.6505,C,L,satellite gps,30
+405,1014,2014,USGS,SATELLITE,70.4995,-149.0946,C,L,satellite gps,30
+406,1015,2014,USGS,SATELLITE,72.4617,-144.88,P,P,satellite gps,30
+519,1137,2014,USFWS-ADFG,REPORT,70.5428,-151.0065,C,F,field gps,30
+520,1138,2014,USFWS-ADFG,REPORT,70.408,-150.4155,C,L,field gps,30
+521,1139,2014,USFWS-ADFG,FLIR,70.5315,-149.2741,P,L,field gps,30

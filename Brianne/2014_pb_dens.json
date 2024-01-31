@@ -1,0 +1,80 @@
+[
+    {
+        "\ufeffRecord": "404",
+        "DenID": "1013",
+        "Spring_year": "2014",
+        "Data_source": "USGS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "70.0919",
+        "Longitude": "-145.6505",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "405",
+        "DenID": "1014",
+        "Spring_year": "2014",
+        "Data_source": "USGS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "70.4995",
+        "Longitude": "-149.0946",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "406",
+        "DenID": "1015",
+        "Spring_year": "2014",
+        "Data_source": "USGS",
+        "Discovery_method": "SATELLITE",
+        "Latitude": "72.4617",
+        "Longitude": "-144.88",
+        "Confirmation": "P",
+        "Substrate": "P",
+        "Position_method": "satellite gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "519",
+        "DenID": "1137",
+        "Spring_year": "2014",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "REPORT",
+        "Latitude": "70.5428",
+        "Longitude": "-151.0065",
+        "Confirmation": "C",
+        "Substrate": "F",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "520",
+        "DenID": "1138",
+        "Spring_year": "2014",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "REPORT",
+        "Latitude": "70.408",
+        "Longitude": "-150.4155",
+        "Confirmation": "C",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    },
+    {
+        "\ufeffRecord": "521",
+        "DenID": "1139",
+        "Spring_year": "2014",
+        "Data_source": "USFWS-ADFG",
+        "Discovery_method": "FLIR",
+        "Latitude": "70.5315",
+        "Longitude": "-149.2741",
+        "Confirmation": "P",
+        "Substrate": "L",
+        "Position_method": "field gps",
+        "Horizontal_error_m": "30"
+    }
+]

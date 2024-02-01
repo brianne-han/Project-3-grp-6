@@ -323,11 +323,13 @@ L.control.timelineSlider = function(options) {
 let baseUrl = "http://127.0.0.1:5000/api/v1.0/population/"
 let url = "http://127.0.0.1:5000/api/v1.0/population/2018"
 let years = "http://127.0.0.1:5000/api/v1.0/years"
+let population_year ='http://127.0.0.1:5000/api/v1.0/population_year'
+
 
 // Creating the map object
 let myMap = L.map("map", {
     center: [63.5888, -154.4931],
-    zoom: 5
+    zoom: 4
   });
   
   // Adding the tile layer
@@ -391,3 +393,26 @@ d3.json(years).then(data => {
      }).addTo(myMap); 
 
 })  
+
+d3.json(population_year).then(data => { 
+    years = data.map(x=>String(x.year))
+    population = data.map(x=>(x.population))
+    console.log(data)
+    let trace = {
+        x: years,
+        y: population,
+        type: "bar"
+    }
+   data = [trace]
+
+   let layout = {title: "Alaska's Population Per Year",
+          xaxis: {title: "Years"},
+          yaxis: {title: 'population'}     
+}
+
+Plotly.newPlot("barplot", data, layout)
+    
+    
+})
+
+

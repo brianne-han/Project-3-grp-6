@@ -21,6 +21,16 @@ def years():
     data_dic = [{'years':int(x)} for x in years]
     return jsonify(data_dic)
 
+#define destination api.
+
+@app.route("/api/v1.0/population_year")
+def population_year():
+    population_year = df.groupby('year', as_index= False).sum()
+    data_dic = [{'year':x['year'],'population': x['population'] } for _,x in population_year.iterrows()]
+    return jsonify(data_dic)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+

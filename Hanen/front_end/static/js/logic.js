@@ -320,10 +320,9 @@ L.control.timelineSlider = function(options) {
 //////////////// End Code ///////////////////
 
 
-let baseUrl = "http://127.0.0.1:5000/api/v1.0/population/"
-let url = "http://127.0.0.1:5000/api/v1.0/population/2018"
-let years = "http://127.0.0.1:5000/api/v1.0/years"
-let population_year ='http://127.0.0.1:5000/api/v1.0/population_year'
+let baseUrl = "./json/"
+let years = "./json/years.json"
+let population_year ='./json/population_year.json'
 
 
 // Creating the map object
@@ -365,7 +364,7 @@ getDataAddMarkers = function( {label, value, map} ) {
     markers.clearLayers()
     var zipCodeMarker = []
 
-    d3.json(baseUrl+label).then(data => { 
+    d3.json(baseUrl+label+'.json').then(data => { 
         for (let i= 0; i<data.length; i++) {
             zipCodeMarker.push(
                 L.circle([data[i]['lat'], data[i]['lon']], {

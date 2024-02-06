@@ -13,6 +13,7 @@ We believe that there will be a link between polar bears migrating away from zip
 
 ## Alaska's Annual Population
 
+Alaska's annual population data is presented through two powerful visualizations: an interactive map and a line chart. The map vividly illustrates population distribution across ZIP codes, with circle markers representing population sizes and colors denoting different years from 2011 to 2018. As we navigate the timeline slider, we can witness how Alaska's population landscape transforms year by year. Zooming in on specific regions, we unveil unique demographic narratives.  On the other hand , the line chart reveals a consistent and slightly upward trajectory in Alaska's population during this period. While the growth may appear modest, it signifies steady population expansion over the years.  This combination of visualizations not only highlights the overall growth but also enables us to identify regions contributing to the state's gradual demographic changes, ultimately painting a comprehensive picture of Alaska's evolving population landscape.
 
 
 ## Maternal Dens of Polar Bears

@@ -1,25 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Interactive Map of Alaska</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Pie Charts</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <style>
-        
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        #map {
-            height: 80vh; 
-            width: 100vw; 
+        .chart {
+            display: inline-block;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="map.js"></script> 
+    <div class="chart" id="chart2013"></div>
+    <div class="chart" id="chart2014"></div>
+
+    <script>
+        // JSON Data
+        var data = {
+            "2013": {
+                "total_bears": 30,
+                "infected_bears": 12
+            },
+            "2014": {
+                "total_bears": 42,
+                "infected_bears": 40
+            }
+        };
+
+        // Create Pie Chart Function
+        function createPieChart(year) {
+            var totalBears = data[year].total_bears;
+            var infectedBears = data[year].infected_bears;
+            var healthyBears = totalBears - infectedBears;
+
+            var dataset = [
+                { label: "Infected", count: infectedBears },
+                { label: "Uninfected", count: healthyBears }
+            ];
+
+            var width = 400;
+            var height = 400;
+            var radius = Math.min(width, height) / 2;
+
+            var svg = d3.select("#chart" + year)
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+            var color = d3.scaleOrdinal()
+                .domain(["Infected", "Uninfected"])
+                .range(["red", "blue"]);
+
+            var pie = d3.pie()
+                .sort(null)
+                .value(function(d) { return d.count; });
+
+            var path = d3.arc()
+                .outerRadius(radius - 10)
+                .innerRadius(0);
+
+            var label = d3.arc()
+                .outerRadius(radius - 40)
+                .innerRadius(radius - 40);
+
+            var arc = svg.selectAll(".arc")
+                .data(pie(dataset))
+                .enter().append("g")
+                .attr("class", "arc");
+
+            arc.append("path")
+                .attr("d", path)
+                .attr("fill", function(d) { return color(d.data.label); })
+                .transition() // 添加过渡效果
+                .duration(1000) // 过渡持续时间（毫秒）
+                .attrTween("d", function(d) {
+                    var interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
+                    return function(t) {
+                        return path(interpolate(t));
+                    };
+                });
+
+            arc.append("text")
+                .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
+                .attr("dy", "0.35em")
+                .text(function(d) { return d.data.label + " " + (d.data.count / totalBears * 100).toFixed(2) + "%"; });
+
+            // Adding year and color explanations
+            svg.append("text")
+                .attr("x", 0)
+                .attr("y", radius + 20)
+                .style("text-anchor", "middle")
+                .style("font-size", "14px")
+                .text(year);
+
+            svg.append("text")
+                .attr("x", 0)
+                .attr("y", radius + 40)
+                .style("text-anchor", "middle")
+                .style("font-size", "14px")
+                .style("fill", "red")
+                .text("Red: Infected Bears");
+
+            svg.append("text")
+                .attr("x", 0)
+                .attr("y", radius + 60)
+                .style("text-anchor", "middle")
+                .style("font-size", "14px")
+                .style("fill", "blue")
+                .text("Blue: Uninfected Bears");
+        }
+
+        // Create Pie Charts for 2013 and 2014
+        createPieChart("2013");
+        createPieChart("2014");
+    </script>
 </body>
 </html>
